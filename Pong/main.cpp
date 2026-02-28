@@ -1,7 +1,9 @@
 #include "raylib.h"
+#include "Paddle.h"
 
 #include <iostream>
 #include <string>
+#include <utility>
 
 const int screenWidth = 800;
 const int screenHeight = 500;
@@ -15,7 +17,7 @@ int main() {
 
 		// Drawing
 		BeginDrawing();
-		ClearBackground(RAYWHITE);
+		ClearBackground({50, 50, 50, 255});
 		EndDrawing();
 	}
 
