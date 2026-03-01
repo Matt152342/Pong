@@ -15,12 +15,16 @@ int main() {
 
 	// Creating player object
 	Paddle player;
-	int playerWidth = 20, playerHeight = 50;
+	int playerWidth = 20, playerHeight = 70;
 	Vector2 playerPosition = { 20.0f, 20.0f };
-	player.setPaddle(playerWidth, playerHeight, playerPosition);
+	float playerSpeed = 500.0f;
+	player.setPaddle(playerWidth, playerHeight, playerPosition, playerSpeed);
 
 	// Game Loop
 	while (!WindowShouldClose()) {
+		// Update
+		float deltaTime = GetFrameTime();
+		player.playerMovement(deltaTime);
 
 		// Drawing
 		BeginDrawing();
